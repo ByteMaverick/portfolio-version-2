@@ -1,0 +1,98 @@
+[
+  {
+    "id": "tripsafe",
+    "title": "TripSafe",
+    "description": "An ML-based accident risk prediction tool using weather, time, and location data to improve commuter safety.",
+    "image": "/projects/project1.png",
+    "tags": ["Python", "Scikit-learn", "Pandas"],
+    "demoUrl": "https://tripsafe-demo.com",
+    "githubUrl": "https://github.com/yourusername/tripsafe",
+    "date": "2024-03-01",
+    "features": [
+      "Real-time accident risk prediction based on weather, time, and location data.",
+      "Responsive dashboard with interactive map overlays.",
+      "Intelligent alerts to highlight dangerous routes before travel.",
+      "Historical data visualization for trend analysis.",
+      "Lightweight and scalable backend pipeline using Python and Flask."
+    ],
+    "technologies": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "Flask",
+      "React",
+      "TailwindCSS",
+      "Leaflet.js",
+      "Google Maps API"
+    ],
+    "sections": {
+      "about": "TripSafe is designed to help commuters proactively assess accident risk before traveling. It integrates machine learning with real-time weather and time data to make location-specific predictions. It aims to make transportation smarter and safer.",
+      "goal": "To reduce road accidents by alerting users to high-risk conditions ahead of time and enabling data-driven route planning.",
+      "problem": "Commuters often make route decisions based on traffic, but not based on actual accident probabilities. There's no widespread tool that combines local weather, time trends, and accident history to forecast risk — especially one accessible to everyday users.",
+      "solution": "TripSafe fills this gap by offering a simple web tool powered by ML and real-time datasets. It computes risk scores based on various conditions and presents actionable suggestions for safer travel.",
+      "architecture": "The backend is powered by Python and Scikit-learn for predictions, with data preprocessed using Pandas. The frontend is built using React and TailwindCSS, integrated with Google Maps API and Leaflet.js for interactive visuals. The model is trained on the US Accidents dataset filtered to California.",
+      "challenges": "One challenge was balancing model accuracy with response speed for real-time predictions. Integrating external APIs like OpenWeatherMap without adding latency was also tricky. Feature engineering to capture time-of-day and weather dynamics required thoughtful preprocessing.",
+      "nextSteps": "We plan to integrate user feedback to fine-tune the risk scoring model and explore mobile-native deployment with offline data sync features. Further improvements will also include congestion-aware risk overlays."
+    }
+  },
+  {
+    "id": 2,
+    "title": "PennyPilot",
+    "description": "A smart personal budgeting app with transaction categorization.",
+    "image": "/projects/project2.png",
+    "tags": ["React", "Flask", "PostgreSQL"],
+    "demoUrl": "https://pennypilot-demo.com",
+    "githubUrl": "https://github.com/yourusername/pennypilot",
+    "route": "/projects/pennypilot"
+  },
+  {
+    "id": 3,
+    "title": "HomeHub",
+    "description": "Home automation dashboard using Home Assistant and Raspberry Pi.",
+    "image": "/projects/project3.png",
+    "tags": ["Python", "MQTT", "Raspberry Pi"],
+    "demoUrl": "https://homehub-demo.com",
+    "githubUrl": "https://github.com/yourusername/homehub",
+    "route": "/projects/homehub"
+  },
+  {
+    "id": 4,
+    "title": "CodeMentor",
+    "description": "A code tutoring platform with AI-generated explanations and guides.",
+    "image": "/projects/project3.png",
+    "tags": ["Next.js", "OpenAI API"],
+    "demoUrl": "https://codementor-demo.com",
+    "githubUrl": "https://github.com/yourusername/codementor",
+    "route": "/projects/codementor"
+  },
+  {
+    "id": 5,
+    "title": "FitTrack",
+    "description": "A fitness tracking app using real-time analytics and personalized goals.",
+    "image": "/projects/project1.png",
+    "tags": ["React Native", "Firebase"],
+    "demoUrl": "https://fittrack-demo.com",
+    "githubUrl": "https://github.com/yourusername/fittrack",
+    "route": "/projects/fittrack"
+  },
+  {
+    "id": 6,
+    "title": "StudySync",
+    "description": "Collaborative study planner and task manager for students.",
+    "image": "/projects/project2.png",
+    "tags": ["Vue.js", "Node.js", "MongoDB"],
+    "demoUrl": "https://studysync-demo.com",
+    "githubUrl": "https://github.com/yourusername/studysync",
+    "route": "/projects/studysync"
+  },
+  {
+    "id": 7,
+    "title": "MedIQ",
+    "description": "AI-powered symptom checker and health advice chatbot.",
+    "image": "/projects/project3.png",
+    "tags": ["Django", "TensorFlow", "React"],
+    "demoUrl": "https://mediq-demo.com",
+    "githubUrl": "https://github.com/yourusername/mediq",
+    "route": "/projects/mediq"
+  }
+]
