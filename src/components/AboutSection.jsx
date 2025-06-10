@@ -17,17 +17,14 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              Hi, I’m Mohammed Ansari — a Data Science student at San Jose State University passionate about building systems that learn,
+              adapt, and solve real-world problems.
+               I’m especially drawn to the intersection of data, technology, and everyday life.
             </p>
-
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving tech
-              landscape.
-            </p>
+              My work spans predictive modeling, automation, and deploying ML solutions that turn complex data into real impact. 
+              I’m also focused on MLOps — using tools and practices that help models stay scalable, reliable, and production-ready. 
+                 </p>
 
             {/* Button Row — fixed alignment */}
             <div className="flex gap-4 pt-2">

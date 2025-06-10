@@ -25,16 +25,15 @@ export const HeroSection = () => {
         className="container max-w-3xl mx-auto z-10 space-y-6"
       >
         <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-          Building smart systems that <span className="italic">learn</span> &{" "}
-          <span className="italic">adapt</span>
-          <br />
-          to <span className="text-primary-gradient italic font-semibold">deliver value</span>
-        </h1>
+        Turning data into powerful,  <br />
+        <span className="text-primary-gradient italic font-semibold">adaptive systems</span>
+      </h1>
 
-        <div className="flex items-center justify-center gap-2 text-lg text-gray-300 font-medium">
-          Hello, I’m
-          <span className="text-white font-semibold ml-1">Mohammed Ansari</span>, a Data Scientist & ML Engineer
-        </div>
+
+        <div className="text-center text-lg md:text-xl text-gray-300 font-medium leading-relaxed max-w-3xl mx-auto">
+  Hi, I’m <span className="text-white font-semibold">Mohammed Ansari</span> — I turn complex data into intelligent systems that learn, adapt, and deliver impact.
+</div>
+
 
         <div className="flex items-center justify-center gap-4 pt-6">
           <Link

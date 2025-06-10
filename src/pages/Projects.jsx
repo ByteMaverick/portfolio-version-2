@@ -94,12 +94,12 @@ export const Projects = () => {
       <div className="container mx-auto max-w-6xl z-10 relative">
         {/* Mobile only */}
       <h2 className="text-3xl font-bold mb-4 text-center mt-19 block md:hidden">
-      Featured <span className="text-[hsl(var(--primary))]">Projects</span>
+      Featured <span className="text-primary-gradient">Projects</span>
       </h2>
 
     {/* Desktop only */}
     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center  hidden md:block">
-  Featured <span className="text-[hsl(var(--primary))]">Projects</span>
+  Featured <span className="text-primary-gradient">Projects</span>
     </h2>
 
         <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
@@ -183,7 +183,7 @@ export const Projects = () => {
 
        <div className="text-center mt-12">
   <a
-    href="https://github.com/yourusername"
+    href="https://github.com/ByteMaverick"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 transition duration-300 font-medium shadow-md"

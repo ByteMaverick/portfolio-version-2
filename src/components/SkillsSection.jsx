@@ -1,94 +1,171 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiJavascript, SiNodedotjs, SiExpress,
-  SiMongodb, SiPostgresql, SiGraphql, SiPython, SiPandas, SiNumpy, SiScikitlearn, SiTensorflow,
-  SiJupyter, SiGit, SiGithub, SiDocker, SiFigma, SiVercel, SiGooglecloud, SiC, SiLinux,
-  SiR, SiMysql
+  SiPython, SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiJupyter,
+  SiGooglecloud, SiMysql, SiR, SiDocker, SiGit, SiGithub, SiLinux, SiApacheairflow,
+  SiDjango, SiFlask, SiScipy, SiJenkins, SiGithubactions, SiTestinglibrary,
+  SiPostgresql, SiMongodb, SiPytorch, SiApachespark, SiApachekafka,
+  SiTerraform, SiKubernetes, SiGrafana, SiDvc, SiPlotly
 } from "react-icons/si";
-import { FaAws, FaJava } from "react-icons/fa";
 
-// ✅ Color map for each skill
+import {
+  FaAws, FaChartBar, FaCogs, FaDatabase, FaRobot, FaChartLine
+} from "react-icons/fa";
+
 const skillColors = {
-  "React": "#61DAFB",
-  "Next.js": "#000000",
-  "TypeScript": "#3178C6",
-  "JavaScript": "#F7DF1E",
-  "Tailwind CSS": "#38BDF8",
-
-  "Node.js": "#339933",
-  "Express": "#000000",
-  "MongoDB": "#47A248",
-  "PostgreSQL": "#336791",
-  "GraphQL": "#E10098",
-
+  // Languages
+  "Java": "#007396",
   "Python": "#3776AB",
+  "R": "#276DC3",
+
+  // Scripting Languages
+  "YAML": "#cb171e",
+  "Bash": "#4EAA25",
+
+
+  // Data Science
   "Pandas": "#150458",
   "NumPy": "#013243",
   "Scikit-learn": "#F7931E",
   "TensorFlow": "#FF6F00",
   "Jupyter": "#F37626",
 
+  // Advanced ML
+  "PyTorch": "#EE4C2C",
+  "Transformers": "#FFCE00",
+  "XGBoost": "#EA5616",
+
+  // Databases
+  "MySQL": "#4479A1",
+  "PostgreSQL": "#336791",
+  "MongoDB": "#47A248",
+  "SQLite": "#003B57",
+
+  // Cloud
   "AWS": "#FF9900",
   "Google Cloud": "#4285F4",
+
+  // MLOps
   "Docker": "#2496ED",
   "Git": "#F05032",
   "GitHub": "#181717",
-  "Figma": "#F24E1E",
-  "Vercel": "#000000",
-
-  "C": "#A8B9CC",
-  "Java": "#007396",
+  "GitHub Actions": "#2088FF",
   "Linux": "#FCC624",
-  "R": "#276DC3",
-  "MySQL": "#4479A1",
+  "Airflow": "#017CEE",
+  "MLflow": "#5A5A5A",
+  "Jenkins": "#D24939",
+  "DVC": "#945DD6",
+  "Weights & Biases": "#F4CC2D",
+
+  // Web
+  "Django": "#092E20",
+  "Flask": "#000000",
+  "Streamlit": "#003B57",
+
+  // Math & Viz
+  "Matplotlib": "#11557C",
+  "Seaborn": "#4B8BBE",
+  "SciPy": "#8CAAE6",
+  "Plotly": "#3F4F75",
+  "Tableau": "#E97627",
+
+  // Testing
+  "A/B Testing": "#FFCB05",
+  "PyTest": "#6DB33F",
+
+  // Big Data
+  "Apache Spark": "#E25A1C",
+  "Kafka": "#000000",
+  "Terraform": "#623CE4",
+  "Kubernetes": "#326CE5",
+  "Grafana": "#F46800",
+
+  // Java Concurrency
+  "Runnable / Thread": "#007396",
+  "ExecutorService": "#007396",
+  "CompletableFuture": "#007396",
+  "ForkJoinPool": "#007396",
+  "Semaphore": "#007396"
 };
 
 const skills = [
-  { name: "React", category: "frontend", icon: SiReact },
-  { name: "Next.js", category: "frontend", icon: SiNextdotjs },
-  { name: "TypeScript", category: "frontend", icon: SiTypescript },
-  { name: "JavaScript", category: "frontend", icon: SiJavascript },
-  { name: "Tailwind CSS", category: "frontend", icon: SiTailwindcss },
+  // Languages
+  { name: "Java", category: "languages", icon: FaCogs },
+  { name: "Python", category: "languages", icon: SiPython },
+  { name: "R", category: "languages", icon: SiR },
 
-  { name: "Node.js", category: "backend", icon: SiNodedotjs },
-  { name: "Express", category: "backend", icon: SiExpress },
-  { name: "MongoDB", category: "backend", icon: SiMongodb },
-  { name: "PostgreSQL", category: "backend", icon: SiPostgresql },
-  { name: "GraphQL", category: "backend", icon: SiGraphql },
+  // Scripting Languages
+  { name: "YAML", category: "scripting-languages", icon: SiJupyter },
+  { name: "Bash", category: "scripting-languages", icon: SiLinux },
 
-  { name: "Python", category: "machine-learning", icon: SiPython },
-  { name: "Pandas", category: "machine-learning", icon: SiPandas },
-  { name: "NumPy", category: "machine-learning", icon: SiNumpy },
-  { name: "Scikit-learn", category: "machine-learning", icon: SiScikitlearn },
-  { name: "TensorFlow", category: "machine-learning", icon: SiTensorflow },
-  { name: "Jupyter", category: "machine-learning", icon: SiJupyter },
+  // Data Science
+  { name: "Pandas", category: "data-science", icon: SiPandas },
+  { name: "NumPy", category: "data-science", icon: SiNumpy },
+  { name: "Scikit-learn", category: "data-science", icon: SiScikitlearn },
+  { name: "TensorFlow", category: "data-science", icon: SiTensorflow },
+  { name: "Jupyter", category: "data-science", icon: SiJupyter },
 
+  // Advanced ML
+  { name: "PyTorch", category: "data-science", icon: SiPytorch },
+  { name: "Transformers", category: "data-science", icon: FaRobot },
+  { name: "XGBoost", category: "data-science", icon: FaCogs },
+
+  // Databases
+  { name: "MySQL", category: "databases", icon: SiMysql },
+  { name: "PostgreSQL", category: "databases", icon: SiPostgresql },
+  { name: "MongoDB", category: "databases", icon: SiMongodb },
+  { name: "SQLite", category: "databases", icon: FaDatabase },
+
+  // Cloud
   { name: "AWS", category: "cloud", icon: FaAws },
   { name: "Google Cloud", category: "cloud", icon: SiGooglecloud },
 
-  { name: "Docker", category: "tools", icon: SiDocker },
-  { name: "Git", category: "tools", icon: SiGit },
-  { name: "GitHub", category: "tools", icon: SiGithub },
-  { name: "Figma", category: "tools", icon: SiFigma },
-  { name: "Vercel", category: "tools", icon: SiVercel },
-  { name: "Linux", category: "tools", icon: SiLinux },
+  // MLOps
+  { name: "Docker", category: "mlops", icon: SiDocker },
+  { name: "Git", category: "mlops", icon: SiGit },
+  { name: "GitHub", category: "mlops", icon: SiGithub },
+  { name: "GitHub Actions", category: "mlops", icon: SiGithubactions },
+  { name: "Linux", category: "mlops", icon: SiLinux },
+  { name: "Airflow", category: "mlops", icon: SiApacheairflow },
+  { name: "MLflow", category: "mlops", icon: FaCogs },
+  { name: "Jenkins", category: "mlops", icon: SiJenkins },
+  { name: "DVC", category: "mlops", icon: SiDvc },
 
-  { name: "C", category: "language", icon: SiC },
-  { name: "Java", category: "language", icon: FaJava },
-  { name: "R", category: "math", icon: SiR },
-  { name: "MySQL", category: "math", icon: SiMysql },
+  // Web
+  { name: "Django", category: "web", icon: SiDjango },
+  { name: "Flask", category: "web", icon: SiFlask },
+  { name: "Streamlit", category: "web", icon: FaChartBar },
+
+  // Math & Viz
+  { name: "Matplotlib", category: "math", icon: FaChartBar },
+  { name: "Seaborn", category: "math", icon: FaChartBar },
+  { name: "SciPy", category: "math", icon: SiScipy },
+  { name: "Plotly", category: "math", icon: SiPlotly },
+  { name: "Tableau", category: "math", icon: FaChartBar },
+
+
+  // Java Concurrency
+  { name: "Runnable / Thread", category: "java-concurrency", icon: FaCogs },
+  { name: "ExecutorService", category: "java-concurrency", icon: FaCogs },
+  { name: "CompletableFuture", category: "java-concurrency", icon: FaCogs },
+  { name: "ForkJoinPool", category: "java-concurrency", icon: FaCogs },
+  { name: "Semaphore", category: "java-concurrency", icon: FaCogs }
 ];
 
 const categories = [
   { key: "all", label: "All" },
-  { key: "frontend", label: "Frontend" },
-  { key: "backend", label: "Backend" },
-  { key: "machine-learning", label: "Machine Learning" },
+  { key: "languages", label: "Languages" },
+  { key: "data-science", label: "Data Science/ML" },
+  { key: "mlops", label: "MLOps & CI/CD" },
   { key: "cloud", label: "Cloud" },
-  { key: "math", label: "Math" },
-  { key: "language", label: "Languages" },
-  { key: "tools", label: "Tools" }
+  { key: "databases", label: "Databases" },
+  { key: "web", label: "Web Frameworks" },
+  { key: "math", label: "Math & Viz" },
+  { key: "scripting-languages", label: "Scripting Languages" },
+  { key: "java-concurrency", label: "Java Concurrency" }
+
+  
 ];
 
 export const SkillsSection = () => {
@@ -102,12 +179,12 @@ export const SkillsSection = () => {
     <section id="skills" className="py-24 px-4 bg-background text-white text-center">
       <h2 className="text-4xl font-bold mb-4">
         My{" "}
-        <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
+        <span className="text-primary-gradient text-transparent bg-clip-text">
           Skills
         </span>
       </h2>
       <p className="text-sm uppercase text-muted-foreground mb-10">
-        What I bring to the table
+        What I use in Data, ML, Cloud, MLOps, DevOps, and More
       </p>
 
       <div className="flex justify-center flex-wrap gap-4 mb-10">
@@ -127,7 +204,7 @@ export const SkillsSection = () => {
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
         {filteredSkills.map(({ name, icon: Icon }) => (
           <div
             key={name}
