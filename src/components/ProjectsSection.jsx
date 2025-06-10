@@ -9,7 +9,7 @@ const projects = [
     image: "/projects/project7.png",
     tags: ["Python", "scikit-learn", "Flask","GCP"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/ByteMaverick/TripSafe",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const projects = [
     image: "/projects/project5.png",
     tags: ["Python", "PyQt5", "SQLite","Bert","Figma"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/ByteMaverick/PennyPilot",
   },
   {
     id: 3,
