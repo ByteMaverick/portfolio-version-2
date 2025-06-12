@@ -23,113 +23,152 @@ export const ProjectDetails = () => {
       <StarBackground />
       <Navbar />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 space-y-12">
+      <main className="relative z-10 max-w-6xl mx-auto px-4 py-24 space-y-20">
         {/* Header */}
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-          <p className="text-muted-foreground text-lg mb-6">{project.description}</p>
+        <section className="text-center space-y-6">
+          <h1 className="text-4xl  text-primary-gradient md:text-5xl font-extrabold  bg-clip-text text-transparent">
+            {project.title}
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {project.description}
+          </p>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-6">
+          <div className="flex flex-wrap justify-center gap-2">
             {project.tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="text-xs px-3 py-1 rounded-full bg-white/5 border border-[hsl(var(--border))] font-medium"
+                className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 mt-6">
             <a
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200 transition"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[hsl(var(--primary))] text-[hsl(var(--background))] font-medium shadow-md hover:brightness-110 transition"
             >
-              Check it out <ExternalLink size={16} />
+              Live Demo <ExternalLink size={16} />
             </a>
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm border border-[hsl(var(--border))] px-4 py-2 rounded-full text-[hsl(var(--foreground))] hover:bg-white/10 transition"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[hsl(var(--border))] text-[hsl(var(--foreground))] hover:bg-white/5 transition"
             >
               GitHub <Github size={16} />
             </a>
           </div>
-        </div>
+        </section>
 
-        {/* Feature Callout */}
-        <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
-          <p className="text-primary text-sm">
-            <strong>Fueling Innovation</strong><br />
-            {project.sections?.goal}
-          </p>
-        </div>
+        {/* Image */}
+        <section>
+          <div className="rounded-2xl overflow-hidden border border-white/10 shadow">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-auto object-cover"
+              onError={(e) => (e.currentTarget.src = "/projects/default.png")}
+            />
+          </div>
+        </section>
 
-        {/* Screenshot */}
-        <div className="overflow-hidden rounded-lg border border-[hsl(var(--border))] shadow-lg">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-auto object-cover"
-            onError={(e) => (e.currentTarget.src = "/projects/default.png")}
-          />
-        </div>
-
-        {/* Feature Section */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Features */}
+        <section>
+          <h2 className="text-2xl font-semibold text-primary mb-6">Key Features</h2>
+          <div className="grid md:grid-cols-2 gap-6">
             {project.features.map((feature, idx) => (
-              <div key={idx} className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] p-4 rounded-lg text-sm text-muted-foreground">
+              <div
+                key={idx}
+                className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl p-5 text-sm text-muted-foreground transition-transform hover:scale-[1.02]"
+              >
                 {feature}
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Tech Section */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Technologies Used</h2>
-          <ul className="list-disc list-inside text-muted-foreground space-y-1">
-            {project.technologies.map((tech, idx) => (
-              <li key={idx}>{tech}</li>
-            ))}
-          </ul>
-        </div>
+        {/* Technologies */}
+      <section className="text-center">
+  <h2 className="text-2xl font-semibold text-primary mb-4">
+    Technologies Used
+  </h2>
+  <div className="flex flex-wrap justify-center gap-3 text-sm text-muted-foreground">
+    {project.technologies.map((tech, idx) => (
+      <span
+        key={idx}
+        className="px-3 py-1 border border-white/10 rounded-full bg-white/5"
+      >
+        {tech}
+      </span>
+    ))}
+  </div>
+</section>
 
-        {/* Problem and Solution */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-2">The Problem</h3>
-            <p className="text-muted-foreground text-sm">{project.sections.problem}</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">The Solution</h3>
-            <p className="text-muted-foreground text-sm">{project.sections.solution}</p>
-          </div>
-        </div>
 
-        {/* Architecture & Challenges */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Architecture</h3>
-            <p className="text-muted-foreground text-sm">{project.sections.architecture}</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Challenges</h3>
-            <p className="text-muted-foreground text-sm">{project.sections.challenges}</p>
-          </div>
-        </div>
+        {/* Project Goal */}
+<section>
+  <div className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl px-6 py-8 shadow-sm hover:shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
+    <h2 className="text-xl md:text-2xl font-semibold text-primary mb-4">
+      Project Goal
+    </h2>
+    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+      {project.sections.goal}
+    </p>
+  </div>
+</section>
+
+
+        {/* Problem / Solution / Architecture / Challenges - As Cards */}
+        <section className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "The Problem",
+              content:
+                "Commuters often make route decisions based on traffic, but not based on actual accident probabilities. There's no widespread tool that combines local weather, time trends, and accident history to forecast risk — especially one accessible to everyday users.",
+            },
+            {
+              title: "The Solution",
+              content:
+                "TripSafe fills this gap by offering a simple web tool powered by ML and real-time datasets. It computes risk scores based on various conditions and presents actionable suggestions for safer travel.",
+            },
+            {
+              title: "Architecture Overview",
+              content:
+                "The backend is powered by Python and Scikit-learn for predictions, with data preprocessed using Pandas. The frontend is built using React and TailwindCSS, integrated with Google Maps API and Leaflet.js for interactive visuals. The model is trained on the US Accidents dataset filtered to California.",
+            },
+            {
+              title: "Implementation Challenges",
+              content:
+                "One challenge was balancing model accuracy with response speed for real-time predictions. Integrating external APIs like OpenWeatherMap without adding latency was also tricky. Feature engineering to capture time-of-day and weather dynamics required thoughtful preprocessing.",
+            },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl p-6 hover:shadow-xl transition-shadow"
+            >
+              <h3 className="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.content}</p>
+            </div>
+          ))}
+        </section>
 
         {/* Next Steps */}
-        <div>
-          <h3 className="text-xl font-semibold mb-2">Next Steps</h3>
-          <p className="text-muted-foreground text-sm">{project.sections.nextSteps}</p>
-        </div>
-      </div>
+       <section>
+  <div className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl px-6 py-8 shadow-sm hover:shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
+    <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4">
+      Next Steps
+    </h3>
+    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+      {project.sections.nextSteps}
+    </p>
+  </div>
+</section>
+
+      </main>
 
       <Footer />
       <ChatBotToggle />

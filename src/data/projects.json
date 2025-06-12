@@ -3,10 +3,10 @@
     "id": "tripsafe",
     "title": "TripSafe",
     "description": "An ML-based accident risk prediction tool using weather, time, and location data to improve commuter safety.",
-    "image": "/projects/project1.png",
+    "image": "/projects/project7.png",
     "tags": ["Python", "Scikit-learn", "Pandas"],
     "demoUrl": "https://tripsafe-demo.com",
-    "githubUrl": "https://github.com/yourusername/tripsafe",
+    "githubUrl": "https://github.com/ByteMaverick/TripSafe",
     "date": "2024-03-01",
     "features": [
       "Real-time accident risk prediction based on weather, time, and location data.",
@@ -36,63 +36,77 @@
     }
   },
   {
-    "id": 2,
-    "title": "PennyPilot",
-    "description": "A smart personal budgeting app with transaction categorization.",
-    "image": "/projects/project2.png",
-    "tags": ["React", "Flask", "PostgreSQL"],
-    "demoUrl": "https://pennypilot-demo.com",
-    "githubUrl": "https://github.com/yourusername/pennypilot",
-    "route": "/projects/pennypilot"
-  },
-  {
-    "id": 3,
-    "title": "HomeHub",
-    "description": "Home automation dashboard using Home Assistant and Raspberry Pi.",
-    "image": "/projects/project3.png",
-    "tags": ["Python", "MQTT", "Raspberry Pi"],
-    "demoUrl": "https://homehub-demo.com",
-    "githubUrl": "https://github.com/yourusername/homehub",
-    "route": "/projects/homehub"
-  },
-  {
-    "id": 4,
-    "title": "CodeMentor",
-    "description": "A code tutoring platform with AI-generated explanations and guides.",
-    "image": "/projects/project3.png",
-    "tags": ["Next.js", "OpenAI API"],
-    "demoUrl": "https://codementor-demo.com",
-    "githubUrl": "https://github.com/yourusername/codementor",
-    "route": "/projects/codementor"
-  },
-  {
-    "id": 5,
-    "title": "FitTrack",
-    "description": "A fitness tracking app using real-time analytics and personalized goals.",
-    "image": "/projects/project1.png",
-    "tags": ["React Native", "Firebase"],
-    "demoUrl": "https://fittrack-demo.com",
-    "githubUrl": "https://github.com/yourusername/fittrack",
-    "route": "/projects/fittrack"
-  },
-  {
-    "id": 6,
-    "title": "StudySync",
-    "description": "Collaborative study planner and task manager for students.",
-    "image": "/projects/project2.png",
-    "tags": ["Vue.js", "Node.js", "MongoDB"],
-    "demoUrl": "https://studysync-demo.com",
-    "githubUrl": "https://github.com/yourusername/studysync",
-    "route": "/projects/studysync"
-  },
-  {
-    "id": 7,
-    "title": "MedIQ",
-    "description": "AI-powered symptom checker and health advice chatbot.",
-    "image": "/projects/project3.png",
-    "tags": ["Django", "TensorFlow", "React"],
-    "demoUrl": "https://mediq-demo.com",
-    "githubUrl": "https://github.com/yourusername/mediq",
-    "route": "/projects/mediq"
+  "id": "PennyPilot",
+  "title": "PennyPilot",
+  "description": "A smart personal budgeting app with transaction categorization, analytics, and CSV import/export support.",
+  "image": "/projects/project4.png",
+  "tags": ["React", "Flask", "PostgreSQL"],
+  "demoUrl": "https://pennypilot-demo.com",
+  "githubUrl": "https://github.com/ByteMaverick/PennyPilot",
+  "route": "/projects/pennypilot",
+  "features": [
+    "Automatic transaction categorization using keyword-based rules and ML tagging.",
+    "Visual budgeting insights with charts and monthly breakdowns.",
+    "CSV import and export for offline tracking and reconciliation.",
+    "Search and filter functionality with dynamic transaction updates.",
+    "Secure backend API with Flask and PostgreSQL integration."
+  ],
+  "technologies": [
+    "React",
+    "Flask",
+    "PostgreSQL",
+    "SQLAlchemy",
+    "Chart.js",
+    "TailwindCSS",
+    "Pandas"
+  ],
+  "sections": {
+    "about": "PennyPilot helps users take control of their personal finances with intuitive tools to track expenses, categorize transactions, and monitor budget trends. Designed with simplicity and utility in mind, it’s ideal for students and young professionals.",
+    "goal": "To provide an accessible financial management platform that simplifies budgeting and empowers users to make informed financial decisions.",
+    "problem": "Most budgeting tools are either overly complex or locked behind subscriptions. Users often struggle to understand where their money goes each month without a simple interface and smart categorization.",
+    "solution": "PennyPilot offers a user-friendly budgeting experience with essential features like transaction grouping, monthly trends, and intelligent categorization — all in one lightweight web app.",
+    "architecture": "Flask powers the REST API with secure endpoints and PostgreSQL as the relational database. React handles the dynamic frontend, with TailwindCSS for design. CSV data is processed using Pandas for bulk import/export.",
+    "challenges": "Creating an effective auto-categorization system without external APIs was challenging. Building a reactive and filterable UI for large datasets also required optimizing query responses.",
+    "nextSteps": "We plan to integrate OCR-based receipt scanning, add predictive budgeting with ML, and release a PWA version for offline access."
   }
+},
+
+{
+  "id": "HomeAutomationHub",
+  "title": "Home Automation Hub",
+  "description": "A home automation dashboard using Home Assistant and Raspberry Pi, focused on energy tracking and smart alerts.",
+  "image": "/projects/project6.png",
+  "tags": ["Python", "MQTT", "Raspberry Pi"],
+  "demoUrl": "https://homehub-demo.com",
+  "githubUrl": "https://github.com/yourusername/homehub",
+  "route": "/projects/homehub",
+  "features": [
+    "Real-time device monitoring via MQTT protocol.",
+    "Home Assistant integration for centralized automation.",
+    "Custom dashboard showing energy usage, temperature, and device states.",
+    "Automation rules based on usage patterns (e.g., turn off unused lights).",
+    "Local database storage and charts for electricity tracking."
+  ],
+  "technologies": [
+    "Python",
+    "Home Assistant",
+    "MQTT",
+    "Raspberry Pi",
+    "SQLite",
+    "Node-RED",
+    "Plotly"
+  ],
+  "sections": {
+    "about": "HomeHub is a personal home automation dashboard that empowers users to manage and monitor smart devices locally. Built around Home Assistant, it supports energy analysis and device control with a privacy-first approach.",
+    "goal": "To simplify smart home management and promote energy efficiency through data-driven automation.",
+    "problem": "Most smart home systems rely heavily on cloud services, which compromises privacy and creates latency. There's also limited visibility into energy usage and historical patterns.",
+    "solution": "HomeHub enables local-first automation and monitoring using MQTT and Raspberry Pi. It offers detailed insights into power usage and device activity, enabling intelligent automations that cut energy waste.",
+    "architecture": "Home Assistant runs on a Raspberry Pi with MQTT for device communication. Python scripts and Node-RED handle automation logic. SQLite is used for lightweight local storage and Plotly for visualizing energy trends.",
+    "challenges": "Ensuring reliable MQTT communication across multiple smart devices and reducing power consumption of always-on setups were key challenges. We also had to carefully design UI components to be informative yet minimal.",
+    "nextSteps": "Future improvements include cloud-free remote access, anomaly detection in usage patterns, and support for voice assistants like Google Assistant and Alexa."
+  }
+}
+
+
+  
 ]

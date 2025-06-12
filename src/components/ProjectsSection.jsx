@@ -1,33 +1,39 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-import { Link } from "react-router-dom"; // Make sure you're using react-router-dom
+import { Link } from "react-router-dom"; // Already imported
 
 const projects = [
-   {
+  {
     id: 1,
     title: "TripSafe",
-    description: "An ML-powered web app that predicts accident risk using time, weather, and location data.",
+    description:
+      "An ML-powered web app that predicts accident risk using time, weather, and location data.",
     image: "/projects/project7.png",
-    tags: ["Python", "scikit-learn", "Flask","GCP"],
+    tags: ["Python", "scikit-learn", "Flask", "GCP"],
     demoUrl: "#",
     githubUrl: "https://github.com/ByteMaverick/TripSafe",
+    route: "/projects/tripsafe",
   },
   {
     id: 2,
     title: "PennyPilot",
-    description: "A personal finance tracker built with PyQt and SQLAlchemy to manage budgets and transactions.",
+    description:
+      "A personal finance tracker built with PyQt and SQLAlchemy to manage budgets and transactions.",
     image: "/projects/project5.png",
-    tags: ["Python", "PyQt5", "SQLite","Bert","Figma"],
+    tags: ["Python", "PyQt5", "SQLite", "Bert", "Figma"],
     demoUrl: "#",
     githubUrl: "https://github.com/ByteMaverick/PennyPilot",
+    route: "/projects/PennyPilot",
   },
   {
     id: 3,
     title: "Home Automation Hub",
-    description: "A smart home dashboard powered by Home Assistant for monitoring and automation.",
+    description:
+      "A smart home dashboard powered by Home Assistant for monitoring and automation.",
     image: "/projects/project6.png",
     tags: ["Docker", "Home Assistant", "Raspberry Pi", "CloudFlare"],
     demoUrl: "#",
     githubUrl: "#",
+    route: "/projects/HomeAutomationHub",
   },
 ];
 
@@ -46,63 +52,79 @@ export const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
+            <Link
               key={project.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              to={project.route}
+              className="group cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="aspect-video relative">
+              <div className="relative h-48 w-full overflow-hidden rounded-lg">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => (e.currentTarget.src = "/projects/default.png")}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div className="mt-4 space-y-2">
+                <h3 className="text-xl font-semibold text-primary">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">{project.description}</p>
+              </div>
 
-                <h3 className=" text-xl text-primary font-semibold mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {project.description}
-                </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="rounded-full bg-white/10 px-2 py-1 text-xs font-medium text-white"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
-                <div className="flex space-x-3">
+              <div className="mt-4 flex items-center space-x-4">
+                <span
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-white/70 hover:text-[hsl(var(--primary))] transition"
+                >
                   <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink size={20} />
                   </a>
+                </span>
+                <span
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-white/70 hover:text-[hsl(var(--primary))] transition"
+                >
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <Github size={20} />
                   </a>
-                </div>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
-<div className="w-full flex justify-center text-center gap-2 mt-16">
-  <Link to="/projects" className="cosmic-button">
-    More Projects
-  </Link>
-</div>
+
+        <div className="w-full flex justify-center text-center gap-2 mt-16">
+          <Link to="/projects" className="cosmic-button">
+            More Projects
+          </Link>
+        </div>
       </div>
     </section>
   );
 };
+
+export default ProjectsSection;
