@@ -7,7 +7,7 @@ export const AIChatBot = () => {
 
   useEffect(() => {
     const fullText =
-      "Hi! I'm your AI Assistant. Ask me anything about Mohammed's skills, projects, or experience.";
+      "Hi! I’m your AI Assistant. Feel free to ask me anything about Mohammed’s skills, projects, or experience. Please note: my current capabilities are limited, as Mohammed is actively developing a more advanced agentic chatbot. ";
     let currentText = "";
     let index = 0;
 

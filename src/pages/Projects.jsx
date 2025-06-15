@@ -53,7 +53,7 @@ export const Projects = () => {
       <Navbar />
 
       <main className="flex-grow">
-        <section id="projects" className="relative overflow-hidden py-24 px-4">
+        <section id="projects" className="relative overflow-hidden pt-44 md:pt-36 pb-24 px-4">
           <div className="container relative z-10 mx-auto max-w-6xl">
             <h2 className="text-center text-3xl font-bold md:text-4xl mb-4">
               Featured{" "}

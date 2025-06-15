@@ -35,7 +35,7 @@ export const HeroSection = () => {
 </div>
 
 
-        <div className="flex items-center justify-center gap-4 pt-6">
+        <div className="flex items-center justify-center gap-3 pt-6 px-2 sm:px-4">
           <Link
             to="/contact"
             className="group relative inline-flex items-center px-6 py-2 rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--card))] text-[hsl(var(--foreground))] font-medium transition-all hover:bg-white hover:text-black"

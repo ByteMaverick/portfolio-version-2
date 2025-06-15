@@ -11,7 +11,7 @@ export const Contact = () => {
       <Navbar />
       <StarBackground />
 
-      <div className="flex-grow">
+      <div className="relative overflow-hidden pt-40 md:pt-24 pb-24 px-4">
         <ContactSection />
       </div>
 

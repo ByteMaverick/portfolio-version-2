@@ -16,7 +16,8 @@ export const AboutMe = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mt-32 max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-start"
+        className="pt-45 md:pt-32 max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-start"
+
       >
         {/* Left: About Text */}
         <div className="space-y-6">
@@ -37,7 +38,7 @@ export const AboutMe = () => {
             <a href="https://github.com/ByteMaverick" target="_blank" className="hover:text-[hsl(var(--primary))]">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com/in/imohammed-ansari" target="_blank" className="hover:text-[hsl(var(--primary))]">
+            <a href="https://linkedin.com/in/imohammedansari" target="_blank" className="hover:text-[hsl(var(--primary))]">
               <Linkedin size={20} />
             </a>
          

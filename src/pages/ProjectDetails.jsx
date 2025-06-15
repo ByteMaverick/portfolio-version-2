@@ -23,7 +23,7 @@ export const ProjectDetails = () => {
       <StarBackground />
       <Navbar />
 
-      <main className="relative z-10 max-w-6xl mx-auto px-4 py-24 space-y-20">
+      <main className="relative z-10 max-w-6xl mx-auto px-4 pt-44 md:pt-36 pb-24 space-y-20">
         {/* Header */}
         <section className="text-center space-y-6">
           <h1 className="text-4xl  text-primary-gradient md:text-5xl font-extrabold  bg-clip-text text-transparent">
