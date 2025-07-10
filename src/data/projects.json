@@ -70,6 +70,42 @@
     "nextSteps": "We plan to integrate OCR-based receipt scanning, add predictive budgeting with ML, and release a PWA version for offline access."
   }
 },
+{
+  "id": "ClauseBit",
+  "title": "ClauseBit",
+  "description": "A legal-tech tool that uses AI to detect, flag, and summarize risky clauses in Terms of Service and Privacy Policies.",
+  "image": "/projects/project1.png",
+  "tags": ["React", "Vertex AI", "MongoDB Atlas"],
+  "demoUrl": "https://clausebit-demo.com",
+  "githubUrl": "https://github.com/ByteMaverick/ClauseBit",
+  "route": "/projects/clausebit",
+  "features": [
+    "Clause-level summarization and risk scoring using LLMs and vector search.",
+    "RAG-based query answering system tailored to user privacy preferences.",
+    "Upload documents or paste text to detect legal red flags.",
+    "Custom risk profiles that personalize alerts and clause summaries.",
+    "Interactive dashboard with clause highlights and transparency scores."
+  ],
+  "technologies": [
+    "React",
+    "TailwindCSS",
+    "Vertex AI",
+    "MongoDB Atlas",
+    "LangChain",
+    "Python",
+    "FastAPI",
+    "Pinecone"
+  ],
+  "sections": {
+    "about": "ClauseBit empowers users to understand and challenge legal documents by using Retrieval-Augmented Generation (RAG) to analyze Terms of Service and Privacy Policies. It flags clauses that may compromise privacy or user rights.",
+    "goal": "To make legal language transparent and accessible to users, empowering them to make informed decisions about the services they use.",
+    "problem": "Most users blindly accept terms they don’t read. Legalese is often designed to hide important details. There's no personalized tool that flags clauses based on user concerns or evolving risks.",
+    "solution": "ClauseBit decodes legal text using AI. Users can upload documents or ask questions about them, and the system highlights suspicious or privacy-violating clauses with explanations tailored to user-selected preferences.",
+    "architecture": "ClauseBit uses a RAG pipeline built with LangChain and Vertex AI for semantic understanding. MongoDB Atlas stores preprocessed vector embeddings, and Pinecone serves vector search. The frontend is powered by React with TailwindCSS for a modern UI.",
+    "challenges": "Ensuring accurate clause segmentation, handling long-context documents, and minimizing hallucinations in clause summaries were major hurdles. Also, optimizing query routing based on prompt types was complex.",
+    "nextSteps": "We plan to launch a browser extension for real-time contract scanning, expand multilingual clause support, and integrate dashboards for policy change tracking over time."
+  }
+},
 
 {
   "id": "HomeAutomationHub",
@@ -106,6 +142,7 @@
     "nextSteps": "Future improvements include cloud-free remote access, anomaly detection in usage patterns, and support for voice assistants like Google Assistant and Alexa."
   }
 }
+
 
 
   

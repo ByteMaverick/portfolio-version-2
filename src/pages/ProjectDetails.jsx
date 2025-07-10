@@ -8,7 +8,7 @@ import { ChatBotToggle } from "../components/ChatBotToggle";
 
 export const ProjectDetails = () => {
   const { projectId } = useParams();
-  const project = projects.find((p) => String(p.id) === projectId);
+  const project = projects.find((p) => String(p.id).toLowerCase() === projectId?.toLowerCase());
 
   if (!project) {
     return (
@@ -26,7 +26,7 @@ export const ProjectDetails = () => {
       <main className="relative z-10 max-w-6xl mx-auto px-4 pt-44 md:pt-36 pb-24 space-y-20">
         {/* Header */}
         <section className="text-center space-y-6">
-          <h1 className="text-4xl  text-primary-gradient md:text-5xl font-extrabold  bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent text-primary-gradient">
             {project.title}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -92,59 +92,37 @@ export const ProjectDetails = () => {
         </section>
 
         {/* Technologies */}
-      <section className="text-center">
-  <h2 className="text-2xl font-semibold text-primary mb-4">
-    Technologies Used
-  </h2>
-  <div className="flex flex-wrap justify-center gap-3 text-sm text-muted-foreground">
-    {project.technologies.map((tech, idx) => (
-      <span
-        key={idx}
-        className="px-3 py-1 border border-white/10 rounded-full bg-white/5"
-      >
-        {tech}
-      </span>
-    ))}
-  </div>
-</section>
-
+        <section className="text-center">
+          <h2 className="text-2xl font-semibold text-primary mb-4">Technologies Used</h2>
+          <div className="flex flex-wrap justify-center gap-3 text-sm text-muted-foreground">
+            {project.technologies.map((tech, idx) => (
+              <span
+                key={idx}
+                className="px-3 py-1 border border-white/10 rounded-full bg-white/5"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </section>
 
         {/* Project Goal */}
-<section>
-  <div className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl px-6 py-8 shadow-sm hover:shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
-    <h2 className="text-xl md:text-2xl font-semibold text-primary mb-4">
-      Project Goal
-    </h2>
-    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-      {project.sections.goal}
-    </p>
-  </div>
-</section>
+        <section>
+          <div className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl px-6 py-8 shadow-sm hover:shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
+            <h2 className="text-xl md:text-2xl font-semibold text-primary mb-4">Project Goal</h2>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              {project.sections.goal}
+            </p>
+          </div>
+        </section>
 
-
-        {/* Problem / Solution / Architecture / Challenges - As Cards */}
+        {/* Problem / Solution / Architecture / Challenges */}
         <section className="grid md:grid-cols-2 gap-6">
           {[
-            {
-              title: "The Problem",
-              content:
-                "Commuters often make route decisions based on traffic, but not based on actual accident probabilities. There's no widespread tool that combines local weather, time trends, and accident history to forecast risk — especially one accessible to everyday users.",
-            },
-            {
-              title: "The Solution",
-              content:
-                "TripSafe fills this gap by offering a simple web tool powered by ML and real-time datasets. It computes risk scores based on various conditions and presents actionable suggestions for safer travel.",
-            },
-            {
-              title: "Architecture Overview",
-              content:
-                "The backend is powered by Python and Scikit-learn for predictions, with data preprocessed using Pandas. The frontend is built using React and TailwindCSS, integrated with Google Maps API and Leaflet.js for interactive visuals. The model is trained on the US Accidents dataset filtered to California.",
-            },
-            {
-              title: "Implementation Challenges",
-              content:
-                "One challenge was balancing model accuracy with response speed for real-time predictions. Integrating external APIs like OpenWeatherMap without adding latency was also tricky. Feature engineering to capture time-of-day and weather dynamics required thoughtful preprocessing.",
-            },
+            { title: "The Problem", content: project.sections.problem },
+            { title: "The Solution", content: project.sections.solution },
+            { title: "Architecture Overview", content: project.sections.architecture },
+            { title: "Implementation Challenges", content: project.sections.challenges },
           ].map((item, idx) => (
             <div
               key={idx}
@@ -157,17 +135,14 @@ export const ProjectDetails = () => {
         </section>
 
         {/* Next Steps */}
-       <section>
-  <div className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl px-6 py-8 shadow-sm hover:shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
-    <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4">
-      Next Steps
-    </h3>
-    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-      {project.sections.nextSteps}
-    </p>
-  </div>
-</section>
-
+        <section>
+          <div className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl px-6 py-8 shadow-sm hover:shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4">Next Steps</h3>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              {project.sections.nextSteps}
+            </p>
+          </div>
+        </section>
       </main>
 
       <Footer />

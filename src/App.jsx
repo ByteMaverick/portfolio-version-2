@@ -15,7 +15,7 @@ function App() {
       <Toaster />
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<AboutMe />} />
           <Route path="/projects" element={<Projects />} /> {/* <-- New route */}
           <Route path="/projects/:projectId" element={<ProjectDetails />} />
           <Route path="/about" element={<AboutMe />} />

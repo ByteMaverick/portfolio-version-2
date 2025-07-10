@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "Home", href: "/", isRoute: true },
-  { name: "About", href: "/about", isRoute: true },
+  //{ name: "Home", href: "/", isRoute: true },
+  { name: "About", href: "/", isRoute: true },
   { name: "Projects", href: "/projects", isRoute: true },
   { name: "Blog", href: "/blog", isRoute: true },
   { name: "Contact", href: "/contact", isRoute: true },

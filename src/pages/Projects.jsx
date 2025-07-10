@@ -27,6 +27,16 @@ export const projects = [
     route: "/projects/PennyPilot",
   },
   {
+    id: "ClauseBit",
+    title: "ClauseBit",
+    description: "A legal-tech tool that uses AI to detect, flag, and summarize risky clauses in Terms of Service and Privacy Policies.",
+    image: "/projects/project1.png",
+    tags: ["RAG", "GCP", "Airflow", "LangChan"],
+    demoUrl: "#",
+    githubUrl: "#",
+    route: "/projects/ClauseBit",
+  },
+  {
     id: "HomeAutomationHub",
     title: "Home Automation Hub",
     description: "A smart home dashboard powered by Home Assistant for monitoring and automation.",
@@ -36,6 +46,7 @@ export const projects = [
     githubUrl: "#",
     route: "/projects/HomeAutomationHub",
   },
+  
 ];
 
 export const Projects = () => {

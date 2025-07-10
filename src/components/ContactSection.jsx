@@ -135,7 +135,7 @@ export const ContactSection = () => {
         name="name"
         required
         className="w-full px-4 py-3 rounded-md border border-white/10 bg-white/10 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-primary"
-        placeholder="Pedro Machado..."
+        placeholder="John Doe..."
       />
     </div>
 

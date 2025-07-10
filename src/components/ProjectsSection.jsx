@@ -25,16 +25,15 @@ const projects = [
     route: "/projects/PennyPilot",
   },
   {
-    id: 3,
-    title: "Home Automation Hub",
-    description:
-      "A smart home dashboard powered by Home Assistant for monitoring and automation.",
-    image: "/projects/project6.png",
-    tags: ["Docker", "Home Assistant", "Raspberry Pi", "CloudFlare"],
+    id: "3",
+    title: "ClauseBit",
+    description: "A legal-tech tool that uses AI to detect, flag, and summarize risky clauses in Terms of Service and Privacy Policies.",
+    image: "/projects/project1.png",
+    tags: ["RAG", "GCP", "Airflow", "LangChan"],
     demoUrl: "#",
     githubUrl: "#",
-    route: "/projects/HomeAutomationHub",
-  },
+    route: "/projects/ClauseBit",
+  }
 ];
 
 export const ProjectsSection = () => {
