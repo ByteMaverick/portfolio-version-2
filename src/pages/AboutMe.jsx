@@ -52,20 +52,21 @@ export const AboutMe = () => {
           {/* Action Buttons */}
           <div className="flex items-center justify-start gap-3 pt-2">
             <a
-            href="/resume.pdf" // ✅ Make sure this path points to your actual resume file in /public
-            download
-            className="group relative inline-flex items-center 
-                      px-4 sm:px-6 py-1.5 sm:py-2 
-                      text-sm sm:text-base 
-                      rounded-full border border-[hsl(var(--border))] 
-                      bg-[hsl(var(--card))] text-[hsl(var(--foreground))] 
-                      font-medium transition-all hover:bg-white hover:text-black"
-          >
-            Download Resume
-            <span className="ml-2 sm:ml-3 bg-white text-black rounded-full p-1 transition-all group-hover:bg-black group-hover:text-white">
-              <ArrowRight className="w-4 h-4" />
-            </span>
-          </a>
+              href="/resume.pdf" // Ensure resume.pdf is inside /public folder
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center 
+                        px-4 sm:px-6 py-1.5 sm:py-2 
+                        text-sm sm:text-base 
+                        rounded-full border border-[hsl(var(--border))] 
+                        bg-[hsl(var(--card))] text-[hsl(var(--foreground))] 
+                        font-medium transition-all hover:bg-white hover:text-black"
+            >
+              View Resume
+              <span className="ml-2 sm:ml-3 bg-white text-black rounded-full p-1 transition-all group-hover:bg-black group-hover:text-white">
+                <ArrowRight className="w-4 h-4" />
+              </span>
+            </a>
 
 
             <button

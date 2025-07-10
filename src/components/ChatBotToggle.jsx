@@ -45,9 +45,10 @@ export const ChatBotToggle = () => {
 
       {/* ChatBot Popup */}
       {isOpen && (
-        <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-4 shadow-md w-full max-w-md mx-auto">
-          <AIChatBot />
-        </div>
+        <div className="mt-10 rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-4 shadow-md w-full max-w-md mx-auto">
+  <AIChatBot />
+</div>
+
       )}
     </div>
   );
