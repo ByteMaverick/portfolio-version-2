@@ -51,7 +51,7 @@ export const HeroSection = () => {
         </span>
       </Link>
 
-      <button
+     <button
       onClick={handleCopyEmail}
       className="flex items-center gap-1 sm:gap-2 
                 text-xs sm:text-sm 
@@ -60,11 +60,18 @@ export const HeroSection = () => {
                 rounded-full text-slate-300 hover:text-white transition"
     >
       <Copy size={16} />
-      <span className="block sm:hidden">Copy Email</span>
+      
+      {/* Mobile */}
+      <span className="block sm:hidden">
+        {copied ? "Copied!" : "Copy Email"}
+      </span>
+
+      {/* Desktop */}
       <span className="hidden sm:block">
         {copied ? "Copied to clipboard" : "mohammed.ansari@sjsu.edu"}
       </span>
 </button>
+
     </div>
 
       </motion.div>
