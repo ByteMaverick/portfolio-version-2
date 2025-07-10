@@ -36,24 +36,37 @@ export const HeroSection = () => {
 
 
         <div className="flex items-center justify-center gap-3 pt-6 px-2 sm:px-4">
-          <Link
-            to="/contact"
-            className="group relative inline-flex items-center px-6 py-2 rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--card))] text-[hsl(var(--foreground))] font-medium transition-all hover:bg-white hover:text-black"
-          >
-            Let’s Connect
-            <span className="ml-3 bg-white text-black rounded-full p-1 transition-all group-hover:bg-black group-hover:text-white">
-              <ArrowRight className="w-4 h-4" />
-            </span>
-          </Link>
+      <Link
+        to="/contact"
+        className="group relative inline-flex items-center 
+                  px-4 sm:px-6 py-1.5 sm:py-2 
+                  text-sm sm:text-base 
+                  rounded-full border border-[hsl(var(--border))] 
+                  bg-[hsl(var(--card))] text-[hsl(var(--foreground))] 
+                  font-medium transition-all hover:bg-white hover:text-black"
+      >
+        Let’s Connect
+        <span className="ml-2 sm:ml-3 bg-white text-black rounded-full p-1 transition-all group-hover:bg-black group-hover:text-white">
+          <ArrowRight className="w-4 h-4" />
+        </span>
+      </Link>
 
-          <button
-            onClick={handleCopyEmail}
-            className="flex items-center gap-2 text-slate-300 hover:text-white transition text-sm border border-white/10 bg-white/5 px-4 py-2 rounded-full"
-          >
-            <Copy size={16} />
-            {copied ? "Copied to clipboard" : "mohammed.ansari@sjsu.edu"}
-          </button>
-        </div>
+      <button
+      onClick={handleCopyEmail}
+      className="flex items-center gap-1 sm:gap-2 
+                text-xs sm:text-sm 
+                border border-white/10 bg-white/5 
+                px-3 sm:px-4 py-1.5 sm:py-2 
+                rounded-full text-slate-300 hover:text-white transition"
+    >
+      <Copy size={16} />
+      <span className="block sm:hidden">Copy Email</span>
+      <span className="hidden sm:block">
+        {copied ? "Copied to clipboard" : "mohammed.ansari@sjsu.edu"}
+      </span>
+</button>
+    </div>
+
       </motion.div>
 
       {/* Scroll Indicator */}
