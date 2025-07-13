@@ -146,18 +146,17 @@ export const AboutMe = () => {
           {/* Experience 1 */}
           <div className="relative mb-16 pl-8">
             <div className="absolute left-0 top-1 w-3 h-3 bg-[hsl(var(--primary))] border-2 border-[hsl(var(--background))] rounded-full" />
-            <p className="text-sm text-[hsl(var(--foreground)/70)] mb-1">Jan 2024 – Present</p>
-            <h3 className="text-xl font-semibold">Project Lead — </h3>
+            <p className="text-sm text-[hsl(var(--foreground)/70)] mb-1">August 2025</p>
+            <h3 className="text-xl font-semibold">Project Lead — AI&ML @SJSU</h3>
             <p className="text-[hsl(var(--foreground)/70)] text-sm mt-2">
-              Spearheaded an AI-powered fencing analysis tool using computer vision and pose estimation. Coordinated a team of developers and researchers to improve athlete feedback with real-time data insights.
-            </p>
+              </p>
           </div>
 
           {/* Experience 2 */}
           <div className="relative pl-8">
             <div className="absolute left-0 top-1 w-3 h-3 bg-[hsl(var(--primary))] border-2 border-[hsl(var(--background))] rounded-full" />
-            <p className="text-sm text-[hsl(var(--foreground)/70)] mb-1">Aug 2023 – Dec 2023</p>
-            <h3 className="text-xl font-semibold">Recruitment Officer — AI&ML Club</h3>
+            <p className="text-sm text-[hsl(var(--foreground)/70)] mb-1">Jan 2025 – May 2025</p>
+            <h3 className="text-xl font-semibold">Recruitment Officer — Project Lead — AI&ML @SJSU</h3>
             <p className="text-[hsl(var(--foreground)/70)] text-sm mt-2">
               Managed onboarding, planned events, and facilitated knowledge-sharing sessions in machine learning, deep learning, and ethical AI development.
             </p>

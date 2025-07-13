@@ -104,6 +104,7 @@ export const ProjectDetails = () => {
               </span>
             ))}
           </div>
+          mt-24 rounded-2xl border border-white/10 bg-white/5 p-4 shadow-md max-w-3xl mx-auto text-left space-y-4
         </section>
 
         {/* Project Goal */}

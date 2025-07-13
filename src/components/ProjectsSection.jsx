@@ -45,8 +45,7 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each one is carefully crafted for
-          performance, usability, and clean design.
+          Here are some of my recent projects — each designed to solve real-world or business problems with a focus on scalability and reliability.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -25,6 +25,10 @@
       "Leaflet.js",
       "Google Maps API"
     ],
+    "slides": [
+    "/slides/project7.png",
+    "/slides/project8.png"
+  ],
     "sections": {
       "about": "TripSafe is designed to help commuters proactively assess accident risk before traveling. It integrates machine learning with real-time weather and time data to make location-specific predictions. It aims to make transportation smarter and safer.",
       "goal": "To reduce road accidents by alerting users to high-risk conditions ahead of time and enabling data-driven route planning.",

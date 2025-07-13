@@ -96,7 +96,7 @@ const skills = [
   { name: "R", category: "languages", icon: SiR },
 
   // Scripting Languages
-  { name: "YAML", category: "scripting-languages", icon: SiJupyter },
+  //{ name: "YAML", category: "scripting-languages", icon: SiJupyter },
   { name: "Bash", category: "scripting-languages", icon: SiLinux },
 
   // Data Science
@@ -108,7 +108,7 @@ const skills = [
 
   // Advanced ML
   { name: "PyTorch", category: "data-science", icon: SiPytorch },
-  { name: "Transformers", category: "data-science", icon: FaRobot },
+  { name: "Huggingface", category: "data-science", icon: FaRobot },
   { name: "XGBoost", category: "data-science", icon: FaCogs },
 
   // Databases
@@ -116,6 +116,7 @@ const skills = [
   { name: "PostgreSQL", category: "databases", icon: SiPostgresql },
   { name: "MongoDB", category: "databases", icon: SiMongodb },
   { name: "SQLite", category: "databases", icon: FaDatabase },
+  { name: "ChromaDB", category: "databases", icon: FaDatabase },
 
   // Cloud
   { name: "AWS", category: "cloud", icon: FaAws },
@@ -129,19 +130,19 @@ const skills = [
   { name: "Linux", category: "mlops", icon: SiLinux },
   { name: "Airflow", category: "mlops", icon: SiApacheairflow },
   { name: "MLflow", category: "mlops", icon: FaCogs },
-  { name: "Jenkins", category: "mlops", icon: SiJenkins },
+  //{ name: "Jenkins", category: "mlops", icon: SiJenkins },
   { name: "DVC", category: "mlops", icon: SiDvc },
 
   // Web
-  { name: "Django", category: "web", icon: SiDjango },
+  { name: "FastAPi", category: "web", icon: SiDjango },
   { name: "Flask", category: "web", icon: SiFlask },
   { name: "Streamlit", category: "web", icon: FaChartBar },
 
   // Math & Viz
   { name: "Matplotlib", category: "math", icon: FaChartBar },
   { name: "Seaborn", category: "math", icon: FaChartBar },
-  { name: "SciPy", category: "math", icon: SiScipy },
-  { name: "Plotly", category: "math", icon: SiPlotly },
+  //{ name: "SciPy", category: "math", icon: SiScipy },
+  //{ name: "Plotly", category: "math", icon: SiPlotly },
   { name: "Tableau", category: "math", icon: FaChartBar },
 
 
