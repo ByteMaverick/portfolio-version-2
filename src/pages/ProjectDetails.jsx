@@ -13,13 +13,13 @@ export const ProjectDetails = () => {
   if (!project) {
     return (
       <div className="flex items-center justify-center h-screen bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
-        <p className="text-lg text-muted-foreground">Project not found.</p>
+        <p className="text-lg text-white/60">Project not found.</p>
       </div>
     );
   }
 
   return (
-    <div className="relative min-h-screen bg-[hsl(var(--background))] text-[hsl(var(--foreground))] overflow-hidden">
+    <div className="relative min-h-screen bg-[hsl(var(--background))] text-white overflow-hidden">
       <StarBackground />
       <Navbar />
 
@@ -29,7 +29,7 @@ export const ProjectDetails = () => {
           <h1 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent text-primary-gradient">
             {project.title}
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
             {project.description}
           </p>
 
@@ -57,7 +57,7 @@ export const ProjectDetails = () => {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[hsl(var(--border))] text-[hsl(var(--foreground))] hover:bg-white/5 transition"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 text-white hover:bg-white/10 transition"
             >
               GitHub <Github size={16} />
             </a>
@@ -78,12 +78,12 @@ export const ProjectDetails = () => {
 
         {/* Features */}
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-6">Key Features</h2>
+          <h2 className="text-2xl font-semibold text-blue-400 mb-6">Key Features</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {project.features.map((feature, idx) => (
               <div
                 key={idx}
-                className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl p-5 text-sm text-muted-foreground transition-transform hover:scale-[1.02]"
+                className="backdrop-blur-md border border-white/10 bg-white/5 rounded-2xl p-6 text-sm text-white/80 shadow-md hover:scale-[1.02] transition-transform"
               >
                 {feature}
               </div>
@@ -93,8 +93,8 @@ export const ProjectDetails = () => {
 
         {/* Technologies */}
         <section className="text-center">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Technologies Used</h2>
-          <div className="flex flex-wrap justify-center gap-3 text-sm text-muted-foreground">
+          <h2 className="text-2xl font-semibold text-blue-400 mb-4">Technologies Used</h2>
+          <div className="flex flex-wrap justify-center gap-3 text-sm text-white/70">
             {project.technologies.map((tech, idx) => (
               <span
                 key={idx}
@@ -104,14 +104,13 @@ export const ProjectDetails = () => {
               </span>
             ))}
           </div>
-          mt-24 rounded-2xl border border-white/10 bg-white/5 p-4 shadow-md max-w-3xl mx-auto text-left space-y-4
         </section>
 
         {/* Project Goal */}
         <section>
-          <div className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl px-6 py-8 shadow-sm hover:shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
-            <h2 className="text-xl md:text-2xl font-semibold text-primary mb-4">Project Goal</h2>
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+          <div className="backdrop-blur-md border border-white/10 bg-white/5 rounded-2xl px-6 py-8 shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
+            <h2 className="text-xl md:text-2xl font-semibold text-blue-400 mb-4">Project Goal</h2>
+            <p className="text-sm md:text-base text-white/70 leading-relaxed">
               {project.sections.goal}
             </p>
           </div>
@@ -127,19 +126,19 @@ export const ProjectDetails = () => {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl p-6 hover:shadow-xl transition-shadow"
+              className="backdrop-blur-md border border-white/10 bg-white/5 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow"
             >
-              <h3 className="text-lg font-semibold text-primary mb-2">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{item.content}</p>
+              <h3 className="text-lg font-semibold text-blue-400 mb-2">{item.title}</h3>
+              <p className="text-sm text-white/70 leading-relaxed">{item.content}</p>
             </div>
           ))}
         </section>
 
         {/* Next Steps */}
         <section>
-          <div className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-xl px-6 py-8 shadow-sm hover:shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
-            <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4">Next Steps</h3>
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+          <div className="backdrop-blur-md border border-white/10 bg-white/5 rounded-2xl px-6 py-8 shadow-md transition-shadow duration-300 text-center max-w-3xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-semibold text-blue-400 mb-4">Next Steps</h3>
+            <p className="text-sm md:text-base text-white/70 leading-relaxed">
               {project.sections.nextSteps}
             </p>
           </div>
