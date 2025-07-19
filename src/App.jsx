@@ -7,6 +7,8 @@ import { Contact } from "./pages/Contact";
 import { Blog } from "./pages/Blog";
 import { ProjectDetails } from "./pages/ProjectDetails";
 import { Toaster } from "@/components/ui/toaster";
+import "keen-slider/keen-slider.min.css";
+import { AIChatBot } from "./components/AIChatBot"; 
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/assistant" element={<AIChatBot />} />
         </Routes>
       </BrowserRouter>
     </>

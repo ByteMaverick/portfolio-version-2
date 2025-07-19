@@ -4,10 +4,23 @@ export const AIChatBot = () => {
   const [messages, setMessages] = useState([]);
   const [typingText, setTypingText] = useState("");
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // 🔐 Generate or retrieve session ID
+  const getSessionId = () => {
+    let id = localStorage.getItem("chat_session_id");
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem("chat_session_id", id);
+    }
+    return id;
+  };
+
+  const session_id = getSessionId();
 
   useEffect(() => {
     const fullText =
-      "Hi! I’m your AI Assistant. Feel free to ask me anything about Mohammed’s skills, projects, or experience. Please note: my current capabilities are limited, as Mohammed is actively developing a more advanced agentic chatbot.";
+      "Hi! I’m your AI Assistant. I'm here to answer any questions about mohammed!";
     let currentText = "";
     let index = 0;
 
@@ -25,33 +38,38 @@ export const AIChatBot = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!input.trim()) return;
 
     const userMessage = { sender: "user", text: input };
-    const botReply = {
-      sender: "bot",
-      text: generateBotReply(input),
-    };
-
-    setMessages((prev) => [...prev, userMessage, botReply]);
+    setMessages((prev) => [...prev, userMessage]);
     setInput("");
-  };
+    setLoading(true);
 
-  const generateBotReply = (question) => {
-    const lower = question.toLowerCase();
-    if (lower.includes("skills"))
-      return "Mohammed specializes in Python, machine learning, data analysis, and full-stack web development.";
-    if (lower.includes("experience"))
-      return "He has experience in accident prediction models, smart home automation, and financial data platforms.";
-    if (lower.includes("projects"))
-      return "Notable projects include TripSafe (ML accident risk predictor) and PennyPilot (AI-based budget tracker).";
-    return "I'm still learning! Try asking about skills, experience, or projects.";
+    try {
+      const res = await fetch("https://portfoliobotv6-834600606953.us-central1.run.app/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ question: input, session_id }),
+      });
+
+      const data = await res.json();
+      const botReply = { sender: "bot", text: data.answer };
+      setMessages((prev) => [...prev, botReply]);
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", text: "❌ Failed to connect to backend." },
+      ]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className=" rounded-2xl border border-white/10 bg-white/5 p-4 shadow-md max-w-3xl mx-auto text-left space-y-4">
-      {/* Chat Window */}
+    <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-md max-w-3xl mx-auto text-left space-y-4">
       <div className="h-48 overflow-y-auto space-y-3 text-left px-2">
         {messages.map((msg, i) => (
           <div
@@ -68,9 +86,9 @@ export const AIChatBot = () => {
         {messages.length === 0 && (
           <div className="text-sm text-white">{typingText}</div>
         )}
+        {loading && <div className="text-sm text-white">Gracie is typing...</div>}
       </div>
 
-      {/* Input Area */}
       <div className="flex items-center gap-2">
         <input
           type="text"
