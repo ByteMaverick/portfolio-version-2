@@ -20,7 +20,7 @@ export const AIChatBot = () => {
 
   useEffect(() => {
     const fullText =
-      "Hi! I’m your AI Assistant. I'm here to answer any questions about mohammed!";
+      "Hello! I’m your AI Assistant, here to help you with any questions you may have about Mohammed’s background, skills, or projects.";
     let currentText = "";
     let index = 0;
 
@@ -61,7 +61,7 @@ export const AIChatBot = () => {
     } catch (err) {
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "❌ Failed to connect to backend." },
+        { sender: "bot", text: "Failed to connect to backend. Please Try Agian Later!" },
       ]);
     } finally {
       setLoading(false);
@@ -86,7 +86,7 @@ export const AIChatBot = () => {
         {messages.length === 0 && (
           <div className="text-sm text-white">{typingText}</div>
         )}
-        {loading && <div className="text-sm text-white">Gracie is typing...</div>}
+        {loading && <div className="text-sm text-white">typing...</div>}
       </div>
 
       <div className="flex items-center gap-2">
