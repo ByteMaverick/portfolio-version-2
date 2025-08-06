@@ -2,16 +2,25 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom"; // Already imported
 
 const projects = [
+   {
+    id: "3",
+    title: "ClauseBit",
+    description: "A legal-tech tool that uses AI to detect, flag, and summarize risky clauses in Terms of Service and Privacy Policies.",
+    image: "/projects/clausebit-demo-port.png",
+    tags: ["RAG", "GCP", "Langraph", "LangChan"],
+    demoUrl: "https://clausebit.online/",
+    githubUrl: "https://github.com/ByteMaverick/ClauseBit",
+    route: "https://github.com/ByteMaverick/ClauseBit",
+  },
   {
     id: 1,
     title: "TripSafe",
     description:
       "An ML-powered web app that predicts accident risk using time, weather, and location data.",
-    image: "/projects/project7.png",
+    image: "/projects/tripsafe.png",
     tags: ["Python", "scikit-learn", "Flask", "GCP"],
-    demoUrl: "#",
     githubUrl: "https://github.com/ByteMaverick/TripSafe",
-    route: "/projects/tripsafe",
+    route: "https://github.com/ByteMaverick/TripSafe",
   },
   {
     id: 2,
@@ -23,16 +32,6 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/ByteMaverick/PennyPilot",
     route: "/projects/PennyPilot",
-  },
-  {
-    id: "3",
-    title: "ClauseBit",
-    description: "A legal-tech tool that uses AI to detect, flag, and summarize risky clauses in Terms of Service and Privacy Policies.",
-    image: "/projects/project1.png",
-    tags: ["RAG", "GCP", "Airflow", "LangChan"],
-    demoUrl: "#",
-    githubUrl: "#",
-    route: "/projects/ClauseBit",
   }
 ];
 

@@ -6,15 +6,25 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
 export const projects = [
+     {
+    id: "3",
+    title: "ClauseBit",
+    description: "A legal-tech tool that uses AI to detect, flag, and summarize risky clauses in Terms of Service and Privacy Policies.",
+    image: "/projects/clausebit-demo-port.png",
+    tags: ["RAG", "GCP", "Langraph", "LangChan"],
+    demoUrl: "https://clausebit.online/",
+    githubUrl: "https://github.com/ByteMaverick/ClauseBit",
+    route: "https://github.com/ByteMaverick/ClauseBit",
+  },
   {
     id: "tripSafe",
     title: "TripSafe",
     description: "An ML-powered web app that predicts accident risk using time, weather, and location data.",
     image: "/projects/project7.png",
     tags: ["Python", "scikit-learn", "Flask", "GCP"],
-    demoUrl: "#",
+    demoUrl: "https://github.com/ByteMaverick/TripSafe",
     githubUrl: "https://github.com/ByteMaverick/TripSafe",
-    route: "/projects/tripsafe",
+    route: "https://github.com/ByteMaverick/TripSafe",
   },
   {
     id: "PennyPilot",
@@ -26,16 +36,7 @@ export const projects = [
     githubUrl: "https://github.com/ByteMaverick/PennyPilot",
     route: "/projects/PennyPilot",
   },
-  {
-    id: "ClauseBit",
-    title: "ClauseBit",
-    description: "A legal-tech tool that uses AI to detect, flag, and summarize risky clauses in Terms of Service and Privacy Policies.",
-    image: "/projects/project1.png",
-    tags: ["RAG", "GCP", "Airflow", "LangChan"],
-    demoUrl: "#",
-    githubUrl: "#",
-    route: "/projects/ClauseBit",
-  },
+
   {
     id: "HomeAutomationHub",
     title: "Home Automation Hub",
@@ -46,6 +47,17 @@ export const projects = [
     githubUrl: "#",
     route: "/projects/HomeAutomationHub",
   },
+  {
+  id: "VegetableDiseaseClassifier",
+  title: "Vegetable Disease Classification",
+  description: "AI-powered CNN model that detects diseases in potato, tomato, and apple leaves, deployed via a user-friendly web/mobile interface.",
+  image: "/projects/crop.png", // Replace with actual image path
+  tags: ["TensorFlow", "CNN", "Image Classification", "Flask", "FastAPI", "TensorFlow Lite", "React"],
+  demoUrl: "https://github.com/ByteMaverick/CropSynergy",  // Replace with actual deployed demo URL if available
+  githubUrl: "https://github.com/ByteMaverick/CropSynergy", // Replace with actual GitHub repository URL
+  route: "https://github.com/ByteMaverick/CropSynergy",
+}
+
   
 ];
 
