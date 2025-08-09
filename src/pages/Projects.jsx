@@ -20,8 +20,8 @@ export const projects = [
     id: "tripSafe",
     title: "TripSafe",
     description: "An ML-powered web app that predicts accident risk using time, weather, and location data.",
-    image: "/projects/project7.png",
-    tags: ["Python", "scikit-learn", "Flask", "GCP"],
+    image: "/projects/tripsafe.png",
+    tags: ["Python", "scikit-learn", "FastAPI", "GCP"],
     demoUrl: "https://github.com/ByteMaverick/TripSafe",
     githubUrl: "https://github.com/ByteMaverick/TripSafe",
     route: "https://github.com/ByteMaverick/TripSafe",
@@ -52,7 +52,7 @@ export const projects = [
   title: "Vegetable Disease Classification",
   description: "AI-powered CNN model that detects diseases in potato, tomato, and apple leaves, deployed via a user-friendly web/mobile interface.",
   image: "/projects/crop.png", // Replace with actual image path
-  tags: ["TensorFlow", "CNN", "Image Classification", "Flask", "FastAPI", "TensorFlow Lite", "React"],
+  tags: ["TensorFlow", "CNN", "Image Classification", "Flask", "FastAPI", "TensorFlow", "React"],
   demoUrl: "https://github.com/ByteMaverick/CropSynergy",  // Replace with actual deployed demo URL if available
   githubUrl: "https://github.com/ByteMaverick/CropSynergy", // Replace with actual GitHub repository URL
   route: "https://github.com/ByteMaverick/CropSynergy",

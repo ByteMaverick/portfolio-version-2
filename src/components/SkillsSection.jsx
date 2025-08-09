@@ -6,7 +6,7 @@ import {
   SiGooglecloud, SiMysql, SiR, SiDocker, SiGit, SiGithub, SiLinux, SiApacheairflow,
   SiDjango, SiFlask, SiScipy, SiJenkins, SiGithubactions, SiTestinglibrary,
   SiPostgresql, SiMongodb, SiPytorch, SiApachespark, SiApachekafka,
-  SiTerraform, SiKubernetes, SiGrafana, SiDvc, SiPlotly
+  SiTerraform, SiKubernetes, SiGrafana, SiDvc, SiPlotly,SiPrometheus
 } from "react-icons/si";
 
 import {
@@ -93,7 +93,7 @@ const skills = [
   // Languages
   { name: "Java", category: "languages", icon: FaCogs },
   { name: "Python", category: "languages", icon: SiPython },
-  { name: "R", category: "languages", icon: SiR },
+  //{ name: "R", category: "languages", icon: SiR },
 
   // Scripting Languages
   //{ name: "YAML", category: "scripting-languages", icon: SiJupyter },
@@ -130,6 +130,9 @@ const skills = [
   { name: "Linux", category: "mlops", icon: SiLinux },
   { name: "Airflow", category: "mlops", icon: SiApacheairflow },
   { name: "MLflow", category: "mlops", icon: FaCogs },
+  
+{ name: "Grafana", category: "mlops", icon: SiGrafana },
+{ name: "Prometheus", category: "mlops", icon: SiPrometheus },
   //{ name: "Jenkins", category: "mlops", icon: SiJenkins },
   { name: "DVC", category: "mlops", icon: SiDvc },
 
@@ -146,12 +149,7 @@ const skills = [
   { name: "Tableau", category: "math", icon: FaChartBar },
 
 
-  // Java Concurrency
-  { name: "Runnable / Thread", category: "java-concurrency", icon: FaCogs },
-  { name: "ExecutorService", category: "java-concurrency", icon: FaCogs },
-  { name: "CompletableFuture", category: "java-concurrency", icon: FaCogs },
-  { name: "ForkJoinPool", category: "java-concurrency", icon: FaCogs },
-  { name: "Semaphore", category: "java-concurrency", icon: FaCogs }
+
 ];
 
 const categories = [
@@ -164,7 +162,6 @@ const categories = [
   { key: "web", label: "Web Frameworks" },
   { key: "math", label: "Math & Viz" },
   { key: "scripting-languages", label: "Scripting Languages" },
-  { key: "java-concurrency", label: "Java Concurrency" }
 
   
 ];
