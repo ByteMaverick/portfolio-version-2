@@ -104,7 +104,7 @@ export const AboutMe = () => {
       B.S. in Data Science (Expected May 2027)
     </p>
     <p className="mt-1 text-sm text-gray-400">
-      Coursework: Data Structures and Algorithms, Machine Learning, Advanced Python, Database Management, Graph Theory, Object Oriented Design
+      Coursework: Data Structures and Algorithms, Machine Learning, Advanced Python, Database Management, Intro to AI, Object Oriented Design
     </p>
   </div>
 
