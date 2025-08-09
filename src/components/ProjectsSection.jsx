@@ -14,7 +14,7 @@ const projects = [
   },
   {
     id: 1,
-    title: "TripSSafe",
+    title: "TripSafe",
     description:
       "An ML-powered web app that predicts accident risk using time, weather, and location data.",
     image: "/projects/tripsafe.png",
