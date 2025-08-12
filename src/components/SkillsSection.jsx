@@ -107,7 +107,7 @@ const skills = [
   { name: "Jupyter", category: "data-science", icon: SiJupyter },
 
   // Advanced ML
-  { name: "PyTorch", category: "data-science", icon: SiPytorch },
+  //{ name: "PyTorch", category: "data-science", icon: SiPytorch },
   { name: "Huggingface", category: "data-science", icon: FaRobot },
   { name: "XGBoost", category: "data-science", icon: FaCogs },
 
@@ -146,7 +146,7 @@ const skills = [
   { name: "Seaborn", category: "math", icon: FaChartBar },
   //{ name: "SciPy", category: "math", icon: SiScipy },
   //{ name: "Plotly", category: "math", icon: SiPlotly },
-  { name: "Tableau", category: "math", icon: FaChartBar },
+  //{ name: "Tableau", category: "math", icon: FaChartBar },
 
 
 
