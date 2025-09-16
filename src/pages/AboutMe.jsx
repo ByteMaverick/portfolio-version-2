@@ -159,10 +159,6 @@ export const AboutMe = () => {
         <span>AWS ML Engineer – Associate</span>
         <span className="text-xs text-gray-400">Expected October 2025</span>
       </li>
-      <li className="flex justify-between items-center">
-        <span>Machine Learning A–Z (Udemy)</span>
-        <span className="text-xs text-gray-400">July 2025</span>
-      </li>
     </ul>
   </div>
 </div>
