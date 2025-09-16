@@ -94,6 +94,46 @@ export const AboutMe = () => {
       </motion.div>
 
 
+{/* Experience Timeline */}
+<div className="mt-16 px-6">
+  <h2 className="text-3xl font-bold mb-14 text-center">
+    Experience <span className="text-primary-gradient">And</span> Leadership
+  </h2>
+
+  <div className="relative max-w-3xl mx-auto pl-6">
+    {/* Vertical line */}
+    <div className="absolute top-0 bottom-0 left-4 w-px bg-[hsl(var(--primary))]" />
+
+    {/* Timeline Items */}
+    {[
+      {
+        date: "Sep 2025 – Present",
+        title: "Research Assistant — Spartan Knowledge-Driven Intelligence & Learning Lab @ SJSU",
+        description: "Investigating techniques to improve LLM reasoning and transparency, building knowledge graphs, and exploring reinforcement-learning methods to inject structured knowledge into large language models for more accurate, traceable reasoning. Exploring healthcare applications such as rapid ER triage and patient-care decision support, and evaluating uses in legal contract analysis and financial credit-risk assessment."
+      },
+      {
+        date: "Feb 2025 – Present", 
+        title: "Lead Outreach Officer — AI&ML Club @ SJSU",
+        description: "Lead a five-member outreach team to organize AI/ML events, set clear goals, and mentor officers for success. Collaborated with multiple clubs and professors to host interdisciplinary workshops and secure expert speakers, boosting event attendance from 20 to 80 through data-driven outreach tactics and targeted marketing."
+      },
+      {
+        date: "Sep 2025 – Present",
+        title: "TARS — Voice-Activated AI Assistant (AI&ML Club Project)", 
+        description: "Club project under the AI&ML Club initiated in September 2025. Built a modular, intelligent assistant with custom wake-word detection using Picovoice Porcupine. Completed Step 1: wake-word detection with microphone streaming via PyAudio and custom \"Hey TARS\" model. Roadmap includes speech-to-text using Whisper/Google STT, brain module for response generation, text-to-speech output, optional web search, and chat memory features."
+      }
+    ].map((experience, index, array) => (
+      <div key={index} className={`relative pl-8 ${index < array.length - 1 ? 'mb-16' : ''}`}>
+        <div className="absolute left-0 top-1 w-3 h-3 bg-[hsl(var(--primary))] border-2 border-[hsl(var(--background))] rounded-full" />
+        <p className="text-sm text-[hsl(var(--foreground)/70)] mb-1">{experience.date}</p>
+        <h3 className="text-xl font-semibold">{experience.title}</h3>
+        <p className="text-[hsl(var(--foreground)/70)] text-sm mt-2">
+          {experience.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
+
       {/* Education Section */}
 <div className="mt-24 rounded-2xl border border-white/10 bg-white/5 p-4 shadow-md max-w-3xl mx-auto text-left space-y-4">
   <div>
@@ -117,7 +157,7 @@ export const AboutMe = () => {
       </li>
       <li className="flex justify-between items-center border-b border-white/5 pb-1">
         <span>AWS ML Engineer – Associate</span>
-        <span className="text-xs text-gray-400">Expected August 2025</span>
+        <span className="text-xs text-gray-400">Expected October 2025</span>
       </li>
       <li className="flex justify-between items-center">
         <span>Machine Learning A–Z (Udemy)</span>
@@ -129,44 +169,10 @@ export const AboutMe = () => {
 
 
 
-
        <ProjectsSection />
        <SkillsSection />
-
-      {/* Experience Timeline */}
-      <div className="mt-16 px-6">
-        <h2 className="text-3xl  font-bold mb-14 text-center">
-            Experience <span className="text-primary-gradient">And</span> Leadership
-        </h2>
-
-        <div className="relative max-w-3xl mx-auto pl-6">
-          {/* Vertical line */}
-          <div className="absolute top-0 bottom-0 left-4 w-px bg-[hsl(var(--primary))]" />
-
-          {/* Experience 1 */}
-          <div className="relative mb-16 pl-8">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[hsl(var(--primary))] border-2 border-[hsl(var(--background))] rounded-full" />
-            <p className="text-sm text-[hsl(var(--foreground)/70)] mb-1">August 2025</p>
-            <h3 className="text-xl font-semibold">Project Lead — AI&ML @SJSU</h3>
-            <p className="text-[hsl(var(--foreground)/70)] text-sm mt-2">
-              </p>
-          </div>
-
-          {/* Experience 2 */}
-          <div className="relative pl-8">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[hsl(var(--primary))] border-2 border-[hsl(var(--background))] rounded-full" />
-            <p className="text-sm text-[hsl(var(--foreground)/70)] mb-1">Jan 2025 – May 2025</p>
-            <h3 className="text-xl font-semibold">Recruitment Officer — Project Lead — AI&ML @SJSU</h3>
-            <p className="text-[hsl(var(--foreground)/70)] text-sm mt-2">
-              Managed onboarding, planned events, and facilitated knowledge-sharing sessions in machine learning, deep learning, and ethical AI development.
-            </p>
-          </div>
-        </div>
-
-    
-        
         <ContactSection />
-      </div>
+    
 
       <Footer />
       <ChatBotToggle />
