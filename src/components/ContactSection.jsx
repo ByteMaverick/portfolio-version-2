@@ -118,65 +118,8 @@ export const ContactSection = () => {
           </div>
 
          {/* Contact Form */}
-<div
-  className="backdrop-blur-md bg-white/5 border border-white/10 p-8 rounded-2xl shadow-lg"
-  onSubmit={handleSubmit}
->
-  <h3 className="text-2xl text-primary-gradient font-semibold mb-6">Send a Message</h3>
 
-  <form className="space-y-6">
-    <div>
-      <label htmlFor="name" className="block text-sm font-medium mb-2">
-        Your Name
-      </label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-        className="w-full px-4 py-3 rounded-md border border-white/10 bg-white/10 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-primary"
-        placeholder="John Doe..."
-      />
-    </div>
 
-    <div>
-      <label htmlFor="email" className="block text-sm font-medium mb-2">
-        Your Email
-      </label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-        className="w-full px-4 py-3 rounded-md border border-white/10 bg-white/10 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-primary"
-        placeholder="john@gmail.com"
-      />
-    </div>
-
-    <div>
-      <label htmlFor="message" className="block text-sm font-medium mb-2">
-        Your Message
-      </label>
-      <textarea
-        id="message"
-        name="message"
-        required
-        rows={5}
-        className="w-full px-4 py-3 rounded-md border border-white/10 bg-white/10 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-        placeholder="Hello, I'd like to talk about..."
-      />
-    </div>
-
-    <button
-      type="submit"
-      disabled={isSubmitting}
-      className={cn("cosmic-button w-full flex items-center justify-center gap-2")}
-    >
-      {isSubmitting ? "Sending..." : "Send Message"}
-      <Send size={16} />
-    </button>
-  </form>
-</div>
         </div>
       </div>
     </section>
