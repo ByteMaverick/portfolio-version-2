@@ -106,21 +106,18 @@ export const AboutMe = () => {
 
     {/* Timeline Items */}
     {[
-      {
-        date: "Sep 2025 – Present",
-        title: "Research Assistant — Spartan Knowledge-Driven Intelligence & Learning Lab @ SJSU",
-        description: "Investigating techniques to improve LLM reasoning and transparency, building knowledge graphs, and exploring reinforcement-learning methods to inject structured knowledge into large language models for more accurate, traceable reasoning. Exploring healthcare applications such as rapid ER triage and patient-care decision support, and evaluating uses in legal contract analysis and financial credit-risk assessment."
-      },
+     {
+  date: "Sep 2025 – Present",
+  title: "Research Assistant — Spartan Knowledge-Driven Intelligence & Learning Lab @ SJSU",
+  description:
+    "• Designing and implementing data pipelines to collect, clean, and integrate structured graph data for large-language-model research aimed at improving reasoning and transparency.\n• Experimenting with different approaches to knowledge-graph schema design, data preprocessing, and early reinforcement-learning prototypes to advance graph-guided LLM experiments in healthcare and financial domains."
+},
+
       {
         date: "Feb 2025 – Present", 
         title: "Lead Outreach Officer — AI&ML Club @ SJSU",
         description: "Lead a five-member outreach team to organize AI/ML events, set clear goals, and mentor officers for success. Collaborated with multiple clubs and professors to host interdisciplinary workshops and secure expert speakers, boosting event attendance from 20 to 80 through data-driven outreach tactics and targeted marketing."
       },
-      {
-        date: "Sep 2025 – Present",
-        title: "TARS — Voice-Activated AI Assistant (AI&ML Club Project)", 
-        description: "Club project under the AI&ML Club initiated in September 2025. Built a modular, intelligent assistant with custom wake-word detection using Picovoice Porcupine. Completed Step 1: wake-word detection with microphone streaming via PyAudio and custom \"Hey TARS\" model. Roadmap includes speech-to-text using Whisper/Google STT, brain module for response generation, text-to-speech output, optional web search, and chat memory features."
-      }
     ].map((experience, index, array) => (
       <div key={index} className={`relative pl-8 ${index < array.length - 1 ? 'mb-16' : ''}`}>
         <div className="absolute left-0 top-1 w-3 h-3 bg-[hsl(var(--primary))] border-2 border-[hsl(var(--background))] rounded-full" />
