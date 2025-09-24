@@ -118,6 +118,18 @@ export const AboutMe = () => {
         title: "Lead Outreach Officer — AI&ML Club @ SJSU",
         description: "Lead a five-member outreach team to organize AI/ML events, set clear goals, and mentor officers for success. Collaborated with multiple clubs and professors to host interdisciplinary workshops and secure expert speakers, boosting event attendance from 20 to 80 through data-driven outreach tactics and targeted marketing."
       },
+      {
+  "date": "Sep 2025 – Present",
+  "title": "Sentient Ambassador",
+  "description": "Promote Sentient’s AI products on campus and support product improvement by providing human feedback to enhance model performance."
+},
+       {
+    "date": "Sep 2025 – Present",
+    "title": "TARS — Voice-Activated AI Assistant (AI&ML Club Project)", 
+    "description": "Club project under the AI&ML Club initiated in September 2025, aimed at recreating the TARS robot software from *Interstellar*. I am responsible for creating and managing the bot’s memory using different approaches."
+}
+
+
     ].map((experience, index, array) => (
       <div key={index} className={`relative pl-8 ${index < array.length - 1 ? 'mb-16' : ''}`}>
         <div className="absolute left-0 top-1 w-3 h-3 bg-[hsl(var(--primary))] border-2 border-[hsl(var(--background))] rounded-full" />
