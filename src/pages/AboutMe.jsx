@@ -110,7 +110,7 @@ export const AboutMe = () => {
   date: "Sep 2025 – Present",
   title: "Research Assistant — Spartan Knowledge-Driven Intelligence & Learning Lab @ SJSU",
   description:
-    "• Designing and implementing data pipelines to collect, clean, and integrate structured graph data for large-language-model research aimed at improving reasoning and transparency.\n• Experimenting with different approaches to knowledge-graph schema design, data preprocessing, and early reinforcement-learning prototypes to advance graph-guided LLM experiments in healthcare and financial domains."
+    "• Collaborating with faculty to develop a baseline architecture and reasoning pipeline that integrates LLMs with Knowledge Graphs to enhance factual transparency and interpretability in enterprise-scale AI systems"
 },
 
       {
